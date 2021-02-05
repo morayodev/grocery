@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.css";
-import Builder from './components/Builder/Builder'
+import Builder1 from './components/Builder/Builder1'
 
 function App() {
   return (
-    <div>
-    <Builder/>
-    </div>
+      <div>
+        <Builder1 />
+      </div>
+   
   );
 }
 

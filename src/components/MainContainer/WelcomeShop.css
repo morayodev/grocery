@@ -28,7 +28,9 @@
     margin:auto;
 }
 .imgwid{
-    width:30%;
+    width:150%;
+    margin:auto;
+    
 }
 .img-container {
   position: relative;
@@ -53,6 +55,9 @@
 }
 .img-container:hover .store-item-icon {
   transform: translate(0, 0);
+}
+.cartSummary{
+  height:fit-content;
 }
 @media (max-width: 600px) {
     .imgwid{

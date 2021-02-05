@@ -1,29 +1,35 @@
-import React, {useState} from 'react'
-import Toolbar from "../Toolbar/Toolbar";
+import React from "react";
 import WelcomeShop from "../MainContainer/WelcomeShop";
-import About from "../MainContainer/About"
-import BookCake from "../MainContainer/BookCake";
+import About from "../MainContainer/About";
+import Products from "../MainContainer/Products";
+import { connect } from "react-redux";
+// import "../MainContainer/WelcomeShop.css";
 
-const Builder = () => {
-    // const [dropdown, setDropdown] = useState(false)
-    
-    // // const setDropdownhandler = () => {
-    // //     if (dropdown === true) {
-    // //         setDropdown(false)
-    // //     } else {
-    // //         setDropdown(true);
-    // //     }
-    //  const setDropdownhandler = () => {
-    //     setDropdown(true)
-    // }
-    return (
+import Search from "../MainContainer/Search";
+// import Cart from "../Cart/Cart";
+
+const Builder = ({ products }) => {
+  return (
+    <>
       <div>
-        <Toolbar/>
         <WelcomeShop />
         <About />
-        <BookCake />
-      </div>
-    );
-}
+        <Search />
 
-export default Builder
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  md:px-10 px-5">
+          {products.map((prod) => (
+            <Products key={prod.id} productData={prod} />
+          ))}
+        </div>
+        {/* <Cart /> */}
+      </div>
+    </>
+  );
+};
+const mapStateToProps = (state) => {
+  return {
+    products: state.shop.products,
+  };
+};
+
+export default connect(mapStateToProps)(Builder);
