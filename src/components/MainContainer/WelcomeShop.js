@@ -4,7 +4,7 @@ import "./WelcomeShop.css"
 
 const WelcomeShop = () => {
     return (
-      <div className="bgImage text-center">
+      <div className="bgImage text-center py-20">
           <h1 >
             <span className="text-white text-3xl">Welcome To </span>
             <span className="text-pink-700 text-4xl">Grandma's</span>

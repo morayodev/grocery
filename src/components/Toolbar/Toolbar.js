@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar"
 
 const Toolbar = (props) => {
     return (
-        <div>
+        <div className="fixed w-full h-15 bg-white z-10">
         <Navbar/>  
         </div>
     )

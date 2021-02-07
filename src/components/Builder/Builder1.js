@@ -6,7 +6,7 @@ import Toolbar from "../Toolbar/Toolbar";
 
 
 
-function Builder1({cart}) {
+function Builder1() {
     return (
       <>
         <Toolbar />

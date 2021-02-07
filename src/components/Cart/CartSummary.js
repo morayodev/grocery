@@ -28,7 +28,7 @@ function CartSummary({ cart }) {
       <h1 className="text-center">
         <strong>Cart Summary</strong>
       </h1>
-      <div className="md:flex flex-none justify-evenly">
+      <div className="md:flex flex-none justify-evenly py-20">
         <div>
           {cart.map((item) => (
             <Cart key={item.id} itemData={item} />

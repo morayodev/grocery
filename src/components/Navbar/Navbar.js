@@ -48,7 +48,7 @@ const Navbar = ({ cart }) => {
           </div>
           <Link to="/cart">
             <div className="md:flex border border-black rounded px-5 py-2 items-center hidden">
-              <FaShoppingCart />
+              <FaShoppingCart className="text-red-700 text-2xl" />
               <p className="pl-5">{countCart} items</p>
             </div>
           </Link>
@@ -71,7 +71,7 @@ const Navbar = ({ cart }) => {
             </ul>
             <Link to="/cart">
               <div className="md:hidden flex mb-2 border border-black rounded px-5 py-2 items-center">
-                <FaShoppingCart />
+                <FaShoppingCart className="text-red-700" />
                 <p className="pl-5">{countCart} items</p>
               </div>
             </Link>
